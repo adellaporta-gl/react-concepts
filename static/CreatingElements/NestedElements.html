@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <style>
+        * {
+            background-color: rgb(192, 192, 192);
+        }
+        #para-id {
+            color: green;
+        }
+        h2 {
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top-level div -->
+    <div id="my-react-app"></div>
+    <script>
+        var firstSiblingElement = React.createElement("div", 
+                                                      { id: "header-container-id", key: "uniq-react-key-1" }, 
+                                                      React.createElement("h2", 
+                                                                          { id: "header-id" }, 
+                                                                          "Welcome to the world of React!")
+                                                    );
+        var secondSiblingElement = React.createElement("p",
+                                                       { id: "para-id", key: "uniq-react-key-2" }, 
+                                                       "React seems reather tedious to work with.");
+        var elementList = [firstSiblingElement, secondSiblingElement];
+        // this container element is what we rendered in the declared top-level div 'my-react-app'
+        var container = React.createElement("div", { id: "container-id" }, elementList);
+        ReactDOM.render(container, document.getElementById("my-react-app"));
+    </script>
+</body>
+
+</html>

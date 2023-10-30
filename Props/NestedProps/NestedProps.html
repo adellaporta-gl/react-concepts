@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+        <style>
+            #company {
+                background-color: black;
+                border: 5px solid green;
+                border-radius: 30px;
+                width: 30vw;
+                font-family: monospace;
+            }
+            .employee {
+                color: blueviolet;
+                font-style: italic;
+                margin: 1em;
+                padding: 0.5em;
+            }
+            .employee .empFirstName {
+                font-weight: bold;
+            }
+            .employee .empLastName {
+                font-style: oblique;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="my-nested-props"></div>
+        <script src="NestedProps.js" type="text/babel"></script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <style>
+        .my-fruits {
+            color: green;
+            font-style: oblique;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-react-app"></div>
+    <script type="text/babel">
+        const orange = "Orange";
+        const apple = "Apple";
+        const banana = "Banana";
+        const fruits = (
+            <div>
+                <p>Fruits:</p>
+                <ul>
+                    <li className="my-fruits" key="fruit-key-1">{orange}</li>
+                    <li className="my-fruits" key="fruit-key-2">{apple}</li>
+                    <li className="my-fruits" key="fruit-key-3">{banana}</li>
+                </ul>
+            </div>
+        );
+        ReactDOM.render(fruits, document.getElementById("my-react-app"));
+    </script>
+</body>
+
+</html>

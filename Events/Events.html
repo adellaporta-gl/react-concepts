@@ -1,0 +1,53 @@
+<!DOCTYPE hoitml>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <style>
+        * {
+            font-family: monospace;
+        }
+        .label {
+            text-decoration: underline;
+        }
+        .counterContainer {
+            background-color: black;
+            border: 5px solid darkcyan;
+            border-radius: 1.2em;
+            color: darkcyan;
+            padding: 1.2em;
+            width: 30vw;
+        }
+
+        .counterScreen {
+            background-color: darkcyan;
+            color: lightcyan;
+            text-align: center;
+            text-justify: distribute;
+        }
+
+        .counterScreen p {
+            padding: 0.2em;
+            font-size: 1.5em;
+        }
+
+        .counterButton {
+            background-color: black;
+            border: 5px solid darkcyan;
+            border-radius: 1.2em;
+            color: darkcyan;
+            padding: 0.2em;
+            width: 50%;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="react-event"></div>
+    <script src="Events.js" type="text/babel"></script>
+</body>
+
+</html>

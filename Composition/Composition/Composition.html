@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <style>
+        * {
+            font-family: monospace;
+            font-size: 1.1em;
+            border-radius: 1.2em;
+            text-align: center;
+        }
+
+        #react-inheritance {
+            width: 50vw;
+        }
+
+        .message {
+            border: 4px solid black;
+            background-color: gray;
+            color: black;
+            margin: 0.2em;
+            padding: 0.2em;
+        }
+
+        .message.success {
+            background-color: green;
+            border: 4px solid black;
+            color: black;
+        }
+
+        .message.error {
+            background-color: red;
+            border: 4px solid black;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="react-composition"></div>
+    <script src="Composition.js" type="text/babel"></script>
+</body>
+
+</html>

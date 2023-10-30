@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <style>
+        * {
+            font-family: monospace;
+            text-align: center;
+        }
+        .lessonInfo {
+            text-align: center;
+            color: black;
+            background-color: lightslategray;
+        }
+        #react-state-uplifting, .lessonInfo {
+            margin: 10px;
+            padding: 0.2em;
+            max-width: 30vw;
+        }
+
+        .networthInput {
+            padding: 2em;
+            border: 2px solid black;
+            color: black;
+        }
+
+        .networthInput fieldset, input {
+            border: 2px solid black;
+        }
+
+        .networthInput.usd {
+            background-color: lightgreen;
+        }
+
+        .networthInput.ars {
+            background-color: lightskyblue;
+        }
+
+        .networthInput legend, .currencySymbolLabel {
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            font-weight: bold;
+        }
+
+        .millionareMsg.ok {
+            color: black;
+            background-color: lime;
+        }
+
+        .millionareMsg.notYet {
+            color: black;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="lessonInfo">
+        As we can see in this example, having state in lower level components is problematic 
+        as it can lead to have some state not synchronized in the app, here 'networth' should 
+        have analysed the value entered and calculate having the currency into account.
+    </p>    
+    <div id="react-state-uplifting"></div>
+    <script src="LiftingStateUp.js" type="text/babel"></script>
+</body>
+
+</html>

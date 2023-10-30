@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <style>
+        * {
+            font-family: monospace;
+        }
+
+        #react-context {
+            margin: 1.1em;
+        }
+
+        .background-theme-light,
+        .button-theme-light,
+        .dialog-theme-light {
+            padding: 1.2em;
+            background-color: white;
+            border: 3px solid black;
+            color: black;
+        }
+
+        .background-theme-dark,
+        .button-theme-dark,
+        .dialog-theme-dark {
+            padding: 1.2em;
+            background-color: black;
+            border: 3px solid white;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="react-context"></div>
+    <script src="Context.js" type="text/babel"></script>
+</body>
+
+</html>

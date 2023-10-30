@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+        <style>
+            .my-fruits {
+                color: aqua;
+                background-color: rgba(0,0,0,0.7);
+                font-style: oblique;
+            }
+        </style>
+    </head>
+    <div id="my-react-app"></div>
+    <script>
+        var fruit1 = React.createElement("li", {id: "fruit-id-1", key: "fruit-key-1", className: "my-fruits"}, "Orange");
+        var fruit2 = React.createElement("li", {id: "fruit-id-2", key: "fruit-key-2", className: "my-fruits"}, "Apple");
+        var fruit3 = React.createElement("li", {id: "fruit-id-3", key: "fruit-key-3", className: "my-fruits"}, "Banana");
+        var fruitList = [fruit1, fruit2, fruit3];
+        var container = React.createElement("div", { id: "container-id" }, fruitList);
+        ReactDOM.render(container, document.getElementById("my-react-app"));
+    </script>
+</html>

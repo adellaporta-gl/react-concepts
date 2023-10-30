@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+
+<body>
+    <div id="my-react-app"></div>
+
+    <script type="text/babel">
+        function pickFruit(fruitNumber) {
+            switch (fruitNumber) {
+                case 1:
+                    return "Orange";
+                case 2:
+                    return "Apple";
+                case 3:
+                    return "Banana";
+                default:
+                    return (<b>Sorry, fruit not found</b>);
+            }
+        }
+        const fruitImage = "images/Fruits.jpg";
+        const image = <img src={fruitImage} width="500" height="300"/>
+        const fruits = (
+            <div>
+                <ul>
+                    <li key="fruit-key-1">{pickFruit(1)}</li>
+                    <li key="fruit-key-2">{pickFruit(2)}</li>
+                    <li key="fruit-key-3">{pickFruit(3)}</li>
+                    <li key="fruit-key-4">{pickFruit(4)}</li>
+                </ul>
+                {image}
+            </div>
+        );
+        const container = (
+            <div>
+                <p>Fruits!</p>
+                {image}
+                {fruits}
+            </div>
+        );
+        ReactDOM.render(container, document.getElementById("my-react-app"));
+    </script>
+</body>
+</html>

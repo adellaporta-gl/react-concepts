@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <style>
+        * {
+            font-family: monospace;
+        }
+
+        #react-prevent-rendering {
+            border: 5px solid black;
+            border-radius: 1.2em;
+            margin: 0.2em;
+            padding: 1em;
+        }
+        
+        .warning {
+            width: 30vw;
+            border-color: yellow;
+            background-color: rgba(50, 50, 50, 0.8);
+        }
+
+        .warning>img {
+            margin: 5%;
+            height: 50%;
+            width: 50%;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="react-prevent-rendering"></div>
+    <script src="PreventingRendering.js" type="text/babel"></script>
+</body>
+
+</html>

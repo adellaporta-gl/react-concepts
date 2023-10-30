@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <style>
+        .my-fruits {
+            color: red;
+            font-style: oblique;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fruits-app"></div>
+    <script type="text/babel">
+        function onTick() {
+            var favoriteFruits = ["Orange", "Apple", "Banana"];
+            var otherFruits = ["Jackfruit", "Strawberry", "Mango", "Grapes"];
+            var randomFruit = otherFruits[Math.floor(Math.random() * otherFruits.length)];
+            const fruits = (
+                <div>
+                    <ul>
+                        <li key="fruit-key-1">{favoriteFruits[0]}</li>
+                        <li key="fruit-key-2">{favoriteFruits[1]}</li>
+                        <li key="fruit-key-3">{favoriteFruits[2]}</li>
+                        <li key="fruit-key-4" className="my-fruits">{randomFruit}</li>
+                    </ul>
+                </div>
+            );
+            ReactDOM.render(fruits, document.getElementById("fruits-app"));
+        }
+        setInterval(onTick, 2000);
+    </script>
+</body>
+
+</html>

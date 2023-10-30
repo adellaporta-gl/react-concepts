@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <style>
+        .container {
+            font-family: monospace;
+            background-color: black;
+            border: 5px solid green;
+            border-radius: 15px;
+            padding: 1.2em;
+            width: 30vw;
+        }
+    </style>
+</head>
+
+<body>
+    container 'outer1'
+    <div id="outer1" class="container"></div>
+    container 'outer2'
+    <div id="outer2" class="container"></div>
+    container 'outer3'
+    <div id="outer3" class="container"></div>
+    <script src="PropsChildren.js" type="text/babel"></script>
+</body>
+
+</html>

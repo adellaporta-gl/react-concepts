@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <style>
+        .my-fruits {
+            color: green;
+            font-style: italic;
+        }
+        .img-fruits {
+            height: 500px;
+            width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-fruit-app"></div>
+    <script type="text/babel">
+        var counter = 0;
+        function onTick() {
+            const imgFruitsPath = 'images/Fruits.jpg';
+            const imgFruits = <img src={imgFruitsPath} className="img-fruits"/>
+            const currentTime = <h1>{new Date().toLocaleTimeString()} {counter}</h1>;
+            const fruits = ["Orange", "Apple", "Banana"];
+            const container = (
+                <div>
+                    <header><h2>What is SmartRendering?</h2></header>
+                    <p>
+                        SmartRendering is the mechanism React has to re-render only the elements
+                        that are being changed. For example, in the below example, if we inspect
+                        DOM structure in the dev tools, we are going to see that only the 
+                        <code>'currentTime'</code> element is re-rendered 
+                    </p>
+                    <ul>
+                        <li key="fruit-key-1">{fruits[0]}</li>
+                        <li key="fruit-key-2">{fruits[1]}</li>
+                        <li key="fruit-key-3">{fruits[2]}</li>
+                    </ul>
+                    {currentTime}
+                    {imgFruits}
+                </div>
+            );
+            counter++;
+            ReactDOM.render(container, document.getElementById("my-fruit-app"));
+        }
+        function note() {
+            const devNote = "NOTE: please note ...";
+            ReactDOM.render(<div>{devNote}</div>, document.getElementById("my-fruit-app"));
+        }
+        setInterval(note, 1000);
+        setInterval(onTick, 3000);
+    </script>
+</body>
+
+</html>
